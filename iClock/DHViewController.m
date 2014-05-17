@@ -85,8 +85,6 @@
     cell.myClock2.minuteHandOffsideLength = 0;
     cell.myClock2.hourHandOffsideLength = 0;
     cell.myClock2.secondHandAlpha = 0;
-
-    
     cell.myClock2.hours=[((DHClock*)[clocks objectAtIndex:indexPath.row]).hour intValue];
     cell.myClock2.minutes=[((DHClock*)[clocks objectAtIndex:indexPath.row]).min intValue];
     cell.myClock2.seconds=[((DHClock*)[clocks objectAtIndex:indexPath.row]).sec intValue];
