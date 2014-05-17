@@ -10,4 +10,5 @@
 #import "BEMAnalogClockView.h"
 #import "BEMMinuteHand.h"
 @interface DHViewController : UIViewController<AddClockDelegate>
+@property (weak, nonatomic) IBOutlet UITableView *tblClocks;
 @end

@@ -77,6 +77,9 @@
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="OdX-0W-xiP"/>
+                    <connections>
+                        <outlet property="tblClocks" destination="u28-f0-hFr" id="jWp-ak-Yco"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

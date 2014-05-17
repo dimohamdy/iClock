@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 @protocol AddClockDelegate <NSObject>
--(void) addClockValuesWith:(int)houe AndMin:(int)min AddSec:(int)sec;
+-(void) addClockValuesWith:(NSString*)houe AndMin:(NSString*)min AddSec:(NSString*)sec;
 @end
 
 @interface DHAddClockViewController : UIViewController

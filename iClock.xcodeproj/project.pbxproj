@@ -28,6 +28,7 @@
 		3D325ACC1926002C00AFEED9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D325AAE1926002C00AFEED9 /* UIKit.framework */; };
 		3D325AD41926002D00AFEED9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3D325AD21926002D00AFEED9 /* InfoPlist.strings */; };
 		3D325AD61926002D00AFEED9 /* iClockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D325AD51926002D00AFEED9 /* iClockTests.m */; };
+		3D78C7C41927AA1600FAE9E9 /* DHClock.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D78C7C31927AA1600FAE9E9 /* DHClock.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,8 @@
 		3D325AD11926002D00AFEED9 /* iClockTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iClockTests-Info.plist"; sourceTree = "<group>"; };
 		3D325AD31926002D00AFEED9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3D325AD51926002D00AFEED9 /* iClockTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iClockTests.m; sourceTree = "<group>"; };
+		3D78C7C21927AA1600FAE9E9 /* DHClock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DHClock.h; path = ../iClock/DHClock.h; sourceTree = "<group>"; };
+		3D78C7C31927AA1600FAE9E9 /* DHClock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DHClock.m; path = ../iClock/DHClock.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +116,8 @@
 				3D099B69192632A2008DE979 /* BEMMinuteHand.m */,
 				3D099B6A192632A2008DE979 /* BEMSecondHand.h */,
 				3D099B6B192632A2008DE979 /* BEMSecondHand.m */,
+				3D78C7C21927AA1600FAE9E9 /* DHClock.h */,
+				3D78C7C31927AA1600FAE9E9 /* DHClock.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -295,6 +300,7 @@
 			files = (
 				3D099B6019262DAE008DE979 /* DHClockTableViewCell.m in Sources */,
 				3D325ABB1926002C00AFEED9 /* DHAppDelegate.m in Sources */,
+				3D78C7C41927AA1600FAE9E9 /* DHClock.m in Sources */,
 				3D099B6D192632A2008DE979 /* BEMHandsAnimation.m in Sources */,
 				3D099B7319265A7C008DE979 /* DHAddClockViewController.m in Sources */,
 				3D099B6F192632A2008DE979 /* BEMMinuteHand.m in Sources */,

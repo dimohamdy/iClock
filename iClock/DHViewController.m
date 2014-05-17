@@ -8,16 +8,25 @@
 
 #import "DHViewController.h"
 #import "DHClockTableViewCell.h"
+#import "DHClock.h"
 @interface DHViewController ()
 
 @end
 
-@implementation DHViewController
-
+@implementation DHViewController{
+    NSMutableArray*clocks;
+}
+@synthesize tblClocks;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    clocks=[[NSMutableArray alloc]init];
+    
+    [clocks addObject:[[DHClock alloc]initWithHour:@"5" AndWithMin:@"55" AndWithSec:@"56"]];
+    [clocks addObject:[[DHClock alloc]initWithHour:@"8" AndWithMin:@"34" AndWithSec:@"56"]];
+    [clocks addObject:[[DHClock alloc]initWithHour:@"9" AndWithMin:@"23" AndWithSec:@"56"]];
+
     
 }
 
@@ -34,7 +43,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return 3;    //count number of row from counting array hear cataGorry is An Array
+    return [clocks count];    //count number of row from counting array hear cataGorry is An Array
 }
 
 
@@ -59,10 +68,10 @@
 //    cell.textLabel.text = @"My Text";
     
     
-    cell.myClock2.setTimeViaTouch = NO;
-    cell.myClock2.enableGraduations = NO;
-    cell.myClock2.realTime = YES;
-    cell.myClock2.currentTime = YES;
+//    cell.myClock2.setTimeViaTouch = NO;
+//    cell.myClock2.enableGraduations = NO;
+//    cell.myClock2.realTime = YES;
+//    cell.myClock2.currentTime = YES;
     cell.myClock2.faceBackgroundAlpha = 0;
     cell.myClock2.enableShadows = NO;
     cell.myClock2.borderColor = [UIColor colorWithRed:0 green:122.0/255.0 blue:255/255 alpha:1];
@@ -76,6 +85,15 @@
     cell.myClock2.minuteHandOffsideLength = 0;
     cell.myClock2.hourHandOffsideLength = 0;
     cell.myClock2.secondHandAlpha = 0;
+
+    
+    cell.myClock2.hours=[((DHClock*)[clocks objectAtIndex:indexPath.row]).hour intValue];
+    cell.myClock2.minutes=[((DHClock*)[clocks objectAtIndex:indexPath.row]).min intValue];
+    cell.myClock2.seconds=[((DHClock*)[clocks objectAtIndex:indexPath.row]).sec intValue];
+    cell.myClock2.realTime = YES;
+
+    [cell currentTimeOnClock:cell.myClock2 Hours:((DHClock*)[clocks objectAtIndex:indexPath.row]).hour Minutes:((DHClock*)[clocks objectAtIndex:indexPath.row]).min Seconds:((DHClock*)[clocks objectAtIndex:indexPath.row]).sec];
+  
     
     return cell;
 }
@@ -94,8 +112,10 @@
 //    [self.navigationController pushViewController:cntrinnerService animated:YES];
     
 }
--(void)addClockValuesWith:(int)houe AndMin:(int)min AddSec:(int)sec{
-    NSLog(@"%d %d  %d",houe,min,sec);
+-(void)addClockValuesWith:(NSString*)houe AndMin:(NSString*)min AddSec:(NSString*)sec{
+    NSLog(@"%@ %@  %@",houe,min,sec);
+
+    [tblClocks reloadData];
 }
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {

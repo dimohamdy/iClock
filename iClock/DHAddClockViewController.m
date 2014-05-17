@@ -55,10 +55,10 @@
 }
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
    // [self dismissViewControllerAnimated:YES completion:nil];
-    [self.delegate addClockValuesWith:10 AndMin:20 AddSec:50];
+    //[self.delegate addClockValuesWith:10 AndMin:20 AddSec:50];
     if ([[segue identifier] isEqualToString:@"Done"]) {
         
-        [self.delegate addClockValuesWith:10 AndMin:20 AddSec:50];
+        [self.delegate addClockValuesWith:txtHour.text AndMin:txtMin.text  AddSec:txtSec.text ];
 
         
     }
